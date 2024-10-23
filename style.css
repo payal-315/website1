@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    font-family: 'Dancing Script', cursive;
+}
+.background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+}
+.gift-box {
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+.gift-box img {
+    width: 150px;
+}
+.gift-box:hover {
+    transform: scale(1.1);
+}
+.birthday-girl-photo img, .birthday-girl-video video {
+    width: 200px;
+    border-radius: 10px;
+}
+.balloons {
+    display: none;
+    text-align: center;
+    position: absolute;
+    bottom: 50%; /* Stop in the middle */
+    left: 50%;
+    transform: translateX(-50%);
+    animation: riseBalloons 2s ease-in-out forwards;
+}
+.balloons img {
+    width: 200px;
+}
+.balloons h1 {
+    color: #FF69B4; /* Pink color */
+    font-size: 3em;
+    margin-top: 20px;
+    animation: swingText 2s infinite alternate, changeColor 2s infinite alternate;
+}
+@keyframes riseBalloons {
+    0% { bottom: 20%; }
+    100% { bottom: 80%; }
+}
+@keyframes changeColor {
+    0% { color: #FF69B4; } /* Pink color */
+    100% { color: #FFD700; } /* Gold color */
+}
+@keyframes swingText {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-10deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(10deg); }
+    100% { transform: rotate(0deg); }
+}
